@@ -1,0 +1,36 @@
+/* Links to Youtube for the Arduino excercises. 
+
+Excercise 1: Controlling a servo moter with a potentiometer 
+
+https://www.youtube.com/watch?v=TK8TS8ToHb4
+
+Excercise 2: Controlling LED Blink speed with potentiometer 
+
+https://www.youtube.com/watch?v=pfTsCXuDhXQ
+*/
+
+
+
+
+void setup() {
+  // put your setup code here, to run once:
+  pinMode(8,OUTPUT); 
+  Serial.begin(9600);
+
+}
+
+void loop() {
+  int sensorValue = analogRead(A0);
+  Serial.println(sensorValue);
+
+  digitalWrite(8,HIGH);
+  delay(sensorValue);
+  digitalWrite(8,LOW);
+  delay(sensorValue);
+   
+ 
+
+}
+
+
+
